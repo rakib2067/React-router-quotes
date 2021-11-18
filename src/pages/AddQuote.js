@@ -1,9 +1,8 @@
 import React from "react";
-
+import QuoteForm from "../components/quotes/QuoteForm";
 export default function AddQuote() {
-  return (
-    <div>
-      <h2>ADD QUOTES</h2>
-    </div>
-  );
+  const addQuoteHandler = (e) => {
+    console.log("hello");
+  };
+  return <QuoteForm onAddQuote={addQuoteHandler} />;
 }
