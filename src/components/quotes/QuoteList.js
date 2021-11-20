@@ -23,7 +23,9 @@ const QuoteList = (props) => {
   const sortedQuotes = sortQuotes(props.quotes, isSortingAscending);
   const filterHandler = () => {
     //first we want to update the URL for queries
-    history.push("/quotes?sort=" + (isSortingAscending ? "desc" : "asc"));
+    history.push(
+      `${location.pathname}?sort=${isSortingAscending ? "desc" : "asc"}`
+    );
   };
   return (
     <Fragment>
